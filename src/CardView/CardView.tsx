@@ -16,7 +16,7 @@ const CardView: React.FC<ICardView> = ({rank, suit}) => {
                 <span className="suit">
                     {
                         suit === "diams"
-                            ? "♦" : "hearts "
+                            ? "♦" : "hearts"
                                 ? "♥" : "clubs"
                                     ? "♣" : "♠"
                     }
