@@ -8,6 +8,15 @@ import PokerHand from "./lib/PokerHand";
 
 const App = () => {
 
+
+    // const testCards: Card[] = [
+    //     new Card('10', 'hearts'),
+    //     new Card('J', 'hearts'),
+    //     new Card('2', 'hearts'),
+    //     new Card('A', 'hearts'),
+    //     new Card('3', 'hearts'),
+    // ];
+
     //Initial State
     const [cards, setCards] = useState<CardDeck>(new CardDeck());//New deck of Cards
     const [handCards, setHandCards] = useState<Card[]>([]); //Current 5 cards in the hand
@@ -23,6 +32,7 @@ const App = () => {
         setCards(new CardDeck());
     }
 
+    //Define Combination if it exists
     const currentCombination =  new PokerHand(handCards);
 
     return (
@@ -68,7 +78,8 @@ const App = () => {
                                     }
                                 </div>
                                 <button onClick={() => getCardsToHand()}>Get Another 5 Cards</button>
-                                <p>{currentCombination.getOutcome(handCards)}</p>
+
+                                <p>{currentCombination.getCombination(handCards)}</p>
                             </>
                 }
             </>
