@@ -8,15 +8,6 @@ import PokerHand from "./lib/PokerHand";
 
 const App = () => {
 
-
-    // const testCards: Card[] = [
-    //     new Card('10', 'hearts'),
-    //     new Card('J', 'hearts'),
-    //     new Card('2', 'hearts'),
-    //     new Card('A', 'hearts'),
-    //     new Card('3', 'hearts'),
-    // ];
-
     //Initial State
     const [cards, setCards] = useState<CardDeck>(new CardDeck());//New deck of Cards
     const [handCards, setHandCards] = useState<Card[]>([]); //Current 5 cards in the hand

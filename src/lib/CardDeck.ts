@@ -23,9 +23,11 @@ export default class CardDeck {
     getCards(howmany: number): Card[] {
 
         const cards:Card[] = [];
+
         for (let i = 0; i < howmany; i++) {
             cards.push(this.getCard());
         }
+
         return cards;
     }
 
